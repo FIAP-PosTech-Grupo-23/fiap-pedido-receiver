@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "969f8272-6f87-43ac-8f3a-3abbbbf418ab",
+		"name": "FIAP Pedido Receiver",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37186886"
+	},
+	"item": [
+		{
+			"name": "Receive pedido on queue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idCliente\": \"5b957b0e-c6f2-41d0-a703-618bf16f62c1\",\r\n  \"produtos\": [\r\n    {\r\n      \"sku\": \"ABCXYZ123\",\r\n      \"quantidade\": 10\r\n    }\r\n  ],\r\n  \"pagamento\": {\r\n    \"numeroCartao\": \"1234\",\r\n    \"cvv\": \"111\",\r\n    \"dataVencimento\": \"12/2029\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

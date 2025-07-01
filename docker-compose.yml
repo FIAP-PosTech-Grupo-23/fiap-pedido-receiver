@@ -1,4 +1,18 @@
 services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_RABBITMQ_HOST: rabbitmq
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - springboot-rabbitmq-network
+
   rabbitmq:
     image: rabbitmq:3.9-management
     container_name: rabbitmq
@@ -11,7 +25,17 @@ services:
     volumes:
       - rabbitmq-lib:/var/lib/rabbitmq/
       - rabbitmq-log:/var/log/rabbitmq/
+    networks:
+      - springboot-rabbitmq-network
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 30s
+      retries: 3
 
 volumes:
   rabbitmq-lib:
   rabbitmq-log:
+
+networks:
+  springboot-rabbitmq-network:
