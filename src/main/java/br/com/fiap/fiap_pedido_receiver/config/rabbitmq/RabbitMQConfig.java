@@ -1,4 +1,4 @@
-package br.com.fiap.fiap_pedido_receiver.config;
+package br.com.fiap.fiap_pedido_receiver.config.rabbitmq;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

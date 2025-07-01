@@ -1,4 +1,4 @@
-package br.com.fiap.fiap_pedido_receiver.core.domain.message;
+package br.com.fiap.fiap_pedido_receiver.domain.message;
 
 import lombok.Builder;
 

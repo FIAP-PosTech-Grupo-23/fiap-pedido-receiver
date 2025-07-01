@@ -1,10 +1,10 @@
-package br.com.fiap.fiap_pedido_receiver.adapter;
+package br.com.fiap.fiap_pedido_receiver.controller;
 
-import br.com.fiap.fiap_pedido_receiver.adapter.json.PedidoJson;
-import br.com.fiap.fiap_pedido_receiver.core.domain.message.ItemMessage;
-import br.com.fiap.fiap_pedido_receiver.core.domain.message.PagamentoMessage;
-import br.com.fiap.fiap_pedido_receiver.core.domain.message.PedidoMessage;
-import br.com.fiap.fiap_pedido_receiver.core.usecase.ReceivePedidoUseCase;
+import br.com.fiap.fiap_pedido_receiver.controller.json.PedidoJson;
+import br.com.fiap.fiap_pedido_receiver.domain.message.ItemMessage;
+import br.com.fiap.fiap_pedido_receiver.domain.message.PagamentoMessage;
+import br.com.fiap.fiap_pedido_receiver.domain.message.PedidoMessage;
+import br.com.fiap.fiap_pedido_receiver.usecase.ReceivePedidoUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

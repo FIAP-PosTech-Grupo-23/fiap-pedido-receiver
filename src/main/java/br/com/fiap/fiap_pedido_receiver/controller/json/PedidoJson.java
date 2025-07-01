@@ -1,4 +1,4 @@
-package br.com.fiap.fiap_pedido_receiver.adapter.json;
+package br.com.fiap.fiap_pedido_receiver.controller.json;
 
 import java.util.List;
 import java.util.UUID;
