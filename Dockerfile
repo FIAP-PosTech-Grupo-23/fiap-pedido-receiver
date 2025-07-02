@@ -5,5 +5,5 @@ RUN mvn -f /usr/src/app/pom.xml clean package -DskipTests
 
 FROM eclipse-temurin:21-alpine
 COPY --from=build /usr/src/app/target/fiap-pedido-receiver-0.0.1-SNAPSHOT.jar /app/fiap-pedido-receiver-0.0.1-SNAPSHOT.jar
-EXPOSE 8083
+EXPOSE 8080
 CMD ["java","-jar","/app/fiap-pedido-receiver-0.0.1-SNAPSHOT.jar"]
